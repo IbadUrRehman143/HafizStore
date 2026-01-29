@@ -1,0 +1,65 @@
+:root {
+    --primary-clr: #1F6FD1;   /* Logo main blue */
+    --secondary-clr: #0B4FA8; /* Logo dark blue */
+    --light-clr: #EAF4FF;     /* Logo light bg */
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+/* ===== Primary Button ===== */
+.btn-primary {
+    background-color: #ffffff;
+    border-radius: 0;
+    position: relative;
+    border: 0;
+    border-top: 5px solid var(--primary-clr) !important;
+    border-bottom: 5px solid var(--primary-clr) !important;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--primary-clr);
+    z-index: -1;
+    transition: height 0.35s ease;
+}
+
+/* Hover animation */
+.btn-primary:hover::before {
+    height: 0;
+}
+
+/* ===== Common Button ===== */
+.btn {
+    color: #ffffff;
+    padding: 10px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: var(--primary-clr);
+}
+
+/* ===== Optional Dark Button (Monthly / Print) ===== */
+.btn-dark {
+    background-color: var(--secondary-clr);
+    border: none;
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background-color: var(--primary-clr);
+    color: #ffffff;
+}
