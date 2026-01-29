@@ -1,5 +1,5 @@
 import React from 'react';
-import Image1 from "../../assets/Images/Logo.png";
+import Image1 from "../../assets/Images/ibad.jpeg";
 
 const Header = ({ lang, setLang }) => {
   return (
